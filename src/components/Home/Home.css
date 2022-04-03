@@ -1,0 +1,13 @@
+.laptop{
+    color: red;
+}
+.buy-btn{
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: white;
+}
+.buy-btn:hover{
+    background-color: black;
+    color: red;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.nav{
+    border: 1px solid red;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 15px;
+    background-color: black;
+}
+.navigate-links{
+    display: flex;
+}
+.nav h1{
+    color: white;
+}
+.navigate-links a{
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+.navigate-links a:hover{
+    color: yellow;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+}
