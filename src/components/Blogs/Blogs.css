@@ -10,3 +10,6 @@
     color: white;
     padding: 15px;
 }
+.blog:hover{
+    color: red;
+}
