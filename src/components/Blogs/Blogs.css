@@ -1,0 +1,12 @@
+.blogs-container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.blog{
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 20px;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}

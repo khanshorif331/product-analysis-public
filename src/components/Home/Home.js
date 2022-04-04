@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useReviews from "../../hooks/useReviews";
 import img from "../../images/laptop.png";
@@ -8,11 +8,18 @@ import "./Home.css";
 
 const Home = () => {
   const [reviews, setReviews] = useReviews();
-  console.log(reviews.slice(0, 3));
-  const handleReview = () => {
-    const newData = reviews.slice(0, 3);
-    setReviews(newData);
-  };
+  // const
+  // setReviews(data);
+  // console.log(reviews.slice(0, 3));
+  // useEffect(() => {
+  // const handleData = () => {
+  //   const newData = reviews.slice(0, 3);
+  //   setReviews(newData);
+  // };
+  // // console.log(handleData());
+
+  // }, []);
+
   console.log(reviews);
   return (
     <div>
@@ -33,6 +40,7 @@ const Home = () => {
           <img src={img} alt="" />
         </div>
       </div>
+
       <Reviews></Reviews>
       <Link to="/reviews">
         <button>See All Reviews</button>
