@@ -9,7 +9,7 @@ const Reviews = () => {
       <h1>Customer Feedback</h1>
       <div className="reviews-container">
         {reviews.map((review) => (
-          <Review review={review}></Review>
+          <Review key={review.id} review={review}></Review>
         ))}
       </div>
     </div>

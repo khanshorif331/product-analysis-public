@@ -1,34 +1,19 @@
-import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import useReviews from "../../hooks/useReviews";
 import img from "../../images/laptop.png";
 import Review from "../Review/Review";
-import Reviews from "../Reviews/Reviews";
 import "./Home.css";
 
 const Home = () => {
   const [reviews, setReviews] = useReviews();
-  // const
-  // setReviews(data);
-  // console.log(reviews.slice(0, 3));
-  // useEffect(() => {
-  // const handleData = () => {
-  //   const newData = reviews.slice(0, 3);
-  //   setReviews(newData);
-  // };
-  // // console.log(handleData());
-
-  // }, []);
-
-  console.log(reviews);
   return (
-    <div>
+    <div className="main-container">
       <div className="container">
         <div className="left-banner">
           <h1>
-            Going to be the next best <span className="laptop">Laptop</span> in
-            the World!!!
+            Next Generation <span className="laptop">Laptop</span>
           </h1>
+          <h1>HP New Nova P409</h1>
           <p>
             We have launched this product few months ago.In a very short time
             this has become everyones choice right now.So if you are looking for
@@ -40,8 +25,12 @@ const Home = () => {
           <img src={img} alt="" />
         </div>
       </div>
-
-      <Reviews></Reviews>
+      <h1>Customer Reviews</h1>
+      <div className="reviews-container">
+        {reviews.slice(0, 3).map((review) => (
+          <Review key={review.id} review={review}></Review>
+        ))}
+      </div>
       <Link to="/reviews">
         <button className="review-btn">See All Reviews</button>
       </Link>
